@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+#issueTrackerURL = ""
+license = "Insert License Here"
+
+[[mods]]
+modId = "mymodid"
+version = "${version}"
+displayName = "MyModId"
+authors = "Me!"
+description = '''
+This is an example description! Tell everyone what your mod is about!
+'''
+#logoFile = ""
+
+[[dependencies.mymodid]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.mymodid]]
+modId = "minecraft"
+type = "required"
+versionRange = "[${min_minecraft},${mineraft}]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.mymodid]]
+modId = "architectury"
+type = "required"
+versionRange = "[${architectury_api},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "interactivemc.mixins.json"
